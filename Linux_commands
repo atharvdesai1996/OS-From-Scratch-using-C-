@@ -1,0 +1,8 @@
+// Qemu commands to run the mykernel.iso
+
+qemu-system-i386 -cdrom mykernel.iso -m 512M -boot d -monitor stdio
+
+// ls (cd)/boot/ in GRUB should now list mykernel.bin and grub/
+
+multiboot /boot/mykernel.bin
+boot
